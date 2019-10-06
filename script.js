@@ -1,43 +1,52 @@
-// generate random password
-
-var peference = prompt("Would you like upper case?");
 
 
-function generate() {
+var alpaBet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+var numbs = '1234567890';
+var character ='!@#$%^&*+=';
+var randomPassword = "";
+var numberOfPCharc= upper.length;
+
+
+
+// if boxes are checked options 
+
+
 
     
 
-    //set password lenth/ complexity 
-
-    var complexity = document.getElementById
-
-    var upper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    var lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var character=["!","@","#","$"];
-    
-    var randomPassword = "";
-
-    upper.push.apply(upper, lower);
-    upper.push.apply(upper,character);
-
-    var numberOfPCharc= upper.length;
-
+  
     for (var i = 0; i<18; i++){
         var thisone = math.floor(math.random()*numberOfPCharc);
-        randomPassword = randomPassword + upper[thisone];
+       ;
     }
 
     return randomPassword;
-}
-    // prompts
 
+
+    // get generated pass and copy to clip board
+    //saw from Youtube - looked like a way to copy to be able to paste )
+function copy(){
+    var generatedPass = document.getElementById("generatedPass");
+
+    var range = document.createRange();
+    range.selectNode(text);
+    window.getSelection().addRange(range);
+    document.execCommand('generatedPass')
+
+}
 
     
-    // if else
+   
 
-    // upon click generate element by id 
+    
 
-    // add previous password to clip 
+
+       
+
+    
+    
+
+
 
 
 

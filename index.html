@@ -20,12 +20,17 @@
           <div class="content">
             <h4>Random Password Generator</h4>
             <br />
-            <input type="text" id="display" />
-            <br />
-            <input type="range" min="0" max="50" name="slider" id="slider" />
-            <br />
+            <p>Please select your preferences then press generate.</p>
+            Numbers: <input type="checkbox" id="numbs"/>
+            Special Characters: <input type="checkbox" id="Special"/>
+            <br/>
+            <br/>
+ 
+            <input type="text" id="generatedPass" />
+            <br/>
+            <br/>
             <button onclick="">Generate</button>
-            <button onclick="">Copy to Clipboard</button>
+            <button onclick="copy()">Copy to Clipboard</button>
           </div>
           <div class="Previous Passwords">
             <b>Previously Generated Passwords </b>
