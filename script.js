@@ -9,34 +9,35 @@ var numBox = document.getElementById("nums");
 var specialBox = document.getElementById("special");
 var submit = document.getElementById("submit");
 var newPw = document.getElementById("newPass");
+var copy = document.getElementById("copy");
+var inputValue = document.getElementById("generatedPass").value;
 
 submit.addEventListener("click", function(a1) {
   var letters = alpaBet;
-
-  if (numBox.check) {
-    letters += nums;
-    //  block of code to be executed if the condition is true
-  } else {
-    ("");
-    //  block of code to be executed if the condition is false
-  }
-  if (specialBox.checked) {
-    letters += special;
-    //  block of code to be executed if the condition is true
-  } else {
-    //  block of code to be executed if the condition is false
-  }
-  newPw.value = password(alphaNum.value, letters);
+  var numLimit = 10;
+  console.log("i clied here");
+  document.getElementById("generatedPass").value = passwordGenerated(
+    numLimit,
+    letters
+  );
 });
 
-function password(l, letters) {
+function passwordGenerated(numLimit, letters) {
   var pwd = "";
-  for (var i = 0; i < l; i++) {
+  for (var i = 0; i < numLimit; i++) {
     pwd += letters.charAt(Math.floor(Math.random() * letters.length));
   }
+
+  console.log("pwd; ", pwd);
+  console.log(numLimit, letters);
+
   return pwd;
 }
 
 // get generated pass and copy to clip board
-
-document.getElementById("lastNums").innerHTML += password + "<br/>";
+copy.addEventListener("click", function(a2) {
+  console.log(document.getElementById("lastNums"));
+  document.getElementById("lastNums").innerHTML = document.getElementById(
+    "generatedPass"
+  ).value;
+});
