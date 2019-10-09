@@ -8,20 +8,33 @@ var alphaNum = document.getElementById("alphaNum");
 var numBox = document.getElementById("nums");
 var specialBox = document.getElementById("special");
 var submit = document.getElementById("submit");
-var newPw = document.getElementById("newPass");
+
 var copy = document.getElementById("copy");
 var inputValue = document.getElementById("generatedPass").value;
 
+//make password appear in box on click
 submit.addEventListener("click", function(a1) {
   var letters = alpaBet;
-  var numLimit = 10;
+
+  var numLimit = 20;
+
   console.log("i clied here");
   document.getElementById("generatedPass").value = passwordGenerated(
     numLimit,
     letters
   );
 });
+// commenting out because it keeps breaking it
+//if (numBox.checked == true){ alpaBet.concat(nums);
 
+//}else '';
+
+//if (specialBox.checked == true){ alpaBet.concat(special);
+//}else ''});
+
+// Commenting this out because it keeps breaking it
+
+//generate password
 function passwordGenerated(numLimit, letters) {
   var pwd = "";
   for (var i = 0; i < numLimit; i++) {
